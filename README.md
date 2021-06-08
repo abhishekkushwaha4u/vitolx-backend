@@ -192,7 +192,7 @@ FrontEnd Repo Link: [Fronted Repo](https://github.com/Shounak-bhattacharya/VIT-O
 [issues-shield]: https://img.shields.io/github/issues/abhishekkushwaha4u/vitolx-backend.svg?style=for-the-badge
 [issues-url]: https://github.com/othneildrew/Best-README-Template/issues
 [license-shield]: https://img.shields.io/github/license/abhishekkushwaha4u/vitolx-backend.svg?style=for-the-badge
-[license-url]: https://github.com/abhishekkushwaha4u/vitolx-backend/blob/master/LICENSE
+[license-url]: https://github.com/abhishekkushwaha4u/vitolx-backend/blob/master/License
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/abhishek-kushwaha-b04341194/
 [product-screenshot]: er_diagram.png
