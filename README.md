@@ -191,7 +191,7 @@ FrontEnd Repo Link: [Fronted Repo](https://github.com/Shounak-bhattacharya/VIT-O
 [stars-url]: https://github.com/abhishekkushwaha4u/vitolx-backend/stargazers
 [issues-shield]: https://img.shields.io/github/issues/abhishekkushwaha4u/vitolx-backend.svg?style=for-the-badge
 [issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/abhishekkushwaha4u/vitolx-backend.svg?style=for-the-badge
+[license-shield]: https://camo.githubusercontent.com/111148992d0253f8d5e36b62087d48a9eabb1d7244b2b7316214f47d5c9a8781/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f6f74686e65696c647265772f426573742d524541444d452d54656d706c6174652e7376673f7374796c653d666f722d7468652d6261646765
 [license-url]: https://github.com/abhishekkushwaha4u/vitolx-backend/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/abhishek-kushwaha-b04341194/
