@@ -101,6 +101,11 @@ To get a local copy up and running follow these simple example steps.
 
 You need to have Python 3.6+ installed on your system and added to path. In case you do not have python installed, you can follow [this](https://medium.com/analytics-vidhya/step-by-step-guide-to-install-python-environment-on-ubuntu-337d8dbdd05d) to set python up for your system.
 
+### ERD Model
+
+This is the ER diagram of the models we used in Django for building this project. In case you need to generate one for your own, run the `er_generator.sh` (Runs on linux only right now, and needs graphviz as a dependency)
+
+![ER Diagram][product-screenshot]
 
 
 ### Installation
@@ -127,6 +132,9 @@ You need to have Python 3.6+ installed on your system and added to path. In case
    ```
 
 Your can serve the frontend code on any localserver and use it easily integrated with your backend on localhost.
+
+***Note: This project has a lot of configurational settings left untouched in `vitolx/settings.py`, please make sure to change the `secret key` and other exposed secrets(like `database credentials`, etc) before running in a sensitive environment!***
+
 <!-- USAGE EXAMPLES -->
 ## Usage
 
@@ -187,4 +195,4 @@ FrontEnd Repo Link: [Fronted Repo](https://github.com/Shounak-bhattacharya/VIT-O
 [license-url]: https://github.com/abhishekkushwaha4u/vitolx-backend/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/abhishek-kushwaha-b04341194/
-[product-screenshot]: ss
+[product-screenshot]: er_diagram.png
