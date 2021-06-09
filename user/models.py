@@ -3,6 +3,8 @@ import uuid
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from user.custom_user_manager import UsersManager
 from django.utils.translation import ugettext_lazy as _
+import secrets
+import string
 
 
 class User(AbstractBaseUser, PermissionsMixin):
@@ -57,3 +59,13 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user.full_name
+
+def otp_generator():
+    return ''.join(secrets.choice(string.ascii_uppercase + string.digits) for i in range(8))
+
+class UserNotification(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    token = models.IntegerField(default=0)
+    otp = models.CharField(max_length=8, default=otp_generator)
+    verified = models.BooleanField(default=False)
+    created_at = models.DateTimeField(_("created_at"), auto_now_add=True)

@@ -13,4 +13,5 @@ urlpatterns = [
     path('profile/view/', views.DisplayUserFullProfileView.as_view()),
     path('profile/update/', views.UpdateUserView.as_view()),
     path('profile/picture/update/', views.UpdateUserProfilePictureView.as_view()),
+    path('notification/set/', views.UserNotificationTokenResetView.as_view()),
 ]

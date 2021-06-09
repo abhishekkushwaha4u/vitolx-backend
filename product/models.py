@@ -11,6 +11,7 @@ class Product(models.Model):
     description = models.CharField(max_length=255)
     tags = models.CharField(max_length=100)
     long_description = models.TextField()
+    created_at = models.DateTimeField(("created_at"), auto_now_add=True)
 
 class ProductImage(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)

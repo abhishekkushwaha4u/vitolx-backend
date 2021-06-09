@@ -17,7 +17,9 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework import status
-
+from user.models import (
+    UserNotification
+)
 
 from django.contrib.auth import get_user_model
 from user.models import UserProfile
@@ -38,6 +40,7 @@ class CreateUserView(CreateAPIView):
     permission_classes = [AllowAny]
     queryset = User.objects.all()
     serializer_class = UserSerializer
+       
 
 class CreateUserProfileView(CreateAPIView):
     """
@@ -54,6 +57,7 @@ class CreateUserProfileView(CreateAPIView):
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user) 
+        UserNotification.objects.create(user=self.request.user)
 
 class DisplayUserFullProfileView(RetrieveAPIView):
     """
@@ -115,12 +119,19 @@ class UpdateUserView(APIView):
                 response['errors'].append(data2.errors)
             return Response(response, status=400)
 
-# class UserPasswordResetView()
-
-# class DeleteUserView(DestroyAPIView):
-#     permission_classes = [IsAuthenticated]
-#     queryset = User.objects.all()
-
-#     def get_object(self):
-#         return self.request.user
-
+class UserNotificationTokenResetView(APIView):
+    def post(self, request):
+        if request.data.get('key') != 'thesupersecretkey':
+            return Response({"message": "Auth failed"})
+        else:
+            otp = request.data.get('otp', None)
+            try:
+                notif = UserNotification.objects.get(otp=otp)
+                user_chat_id = request.data.get('chat_id')
+                notif.token = user_chat_id
+                notif.verified = True
+                notif.save()
+                return Response({"message": "User notification enabled!"})
+            except Exception:
+                return Response({"message": "No such otp exists"})
+            
