@@ -135,3 +135,14 @@ class UserNotificationTokenResetView(APIView):
             except Exception:
                 return Response({"message": "No such otp exists"})
             
+
+class GetUserNotificationTokenView(APIView):
+    permission_classes = [IsAuthenticated]
+    def get(self, request):
+        otp = ''
+        try:
+            otp = request.user.usernotification.otp
+            return Response({"otp": otp})
+        except Exception:
+            return Response({"otp": "", "message": "check if profile created"}, status=401)
+        
