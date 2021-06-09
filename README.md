@@ -75,6 +75,7 @@ Our idea was to build a small web application to enable people to allow exchange
 
 * [Django](https://www.djangoproject.com/)
 * [Python](https://www.python.org/)
+* [Telegram Bot API](https://telegram.org/blog/bot-revolution)
 
 
 ### Setting Up VirtualEnvironment(Follow this in case you are new)
@@ -131,15 +132,33 @@ This is the ER diagram of the models we used in Django for building this project
    python manage.py runserver
    ```
 
+7. To setup the telegram script, launch another terminal/cmd and activate the same virtual environment
+
+8. Navigate to `telegram_bot` with 
+   ```sh
+   cd telegram_bot
+   ```
+9. Start the bot with
+   ```sh
+   python run_bot.py
+   ```
+
 Your can serve the frontend code on any localserver and use it easily integrated with your backend on localhost.
 
-***Note: This project has a lot of configurational settings left untouched in `vitolx/settings.py`, please make sure to change the `secret key` and other exposed secrets(like `database credentials`, etc) before running in a sensitive environment!***
+Note: Please configure the .env before running all these projects.
+You can use the values provided in .env for both the telegram part and the server part.
+Please configure the telegram bot token before starting the server.
+
+In order to obtain a token for yourself, follow [this](https://medium.com/shibinco/create-a-telegram-bot-using-botfather-and-get-the-api-token-900ba00e0f39) article.
+
+***Note: This project has a lot of configurational settings left untouched in `vitolx/settings.py`, please make sure to change the `secret key` and other dummy exposed secrets(like `database credentials`, etc) before running in a sensitive environment!***
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-_For more examples, please refer to the [Documentation](https://documenter.getpostman.com/view/7132402/TzY68Zax)_
+_For more examples on the api endpoints, please refer to the [Documentation](https://documenter.getpostman.com/view/7132402/TzY68Zax)_
 
+_For using the telegram script, search for your bot in telegram and press `start`. It will ask you to setup your notification id, once you are done, you can get updates whenever someone wants to communicate with you on that part on telegram._
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -171,7 +190,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Abhishek Kushwaha- [@itsAbhi1706](https://twitter.com/itsAbhi1706) - abh1234@mail.com
+Abhishek Kushwaha- [@itsAbhi1706](https://twitter.com/itsAbhi1706) - abhi1234@mail.com
 
 Backend Repo Link: [Backend Repo](https://github.com/abhishekkushwaha4u/vitolx-backend)
 
